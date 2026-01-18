@@ -1,0 +1,2 @@
+:HL["/Weather-App/_next/static/chunks/c136a6fed7d81e49.css","style"]
+0:{"buildId":"uEEBsJt_7kd4kfGkRmSa9","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

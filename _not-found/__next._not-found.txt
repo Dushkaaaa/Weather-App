@@ -1,0 +1,4 @@
+1:"$Sreact.fragment"
+2:I[12093,["/Weather-App/_next/static/chunks/b582162c3fad5500.js"],"default"]
+3:I[98567,["/Weather-App/_next/static/chunks/b582162c3fad5500.js"],"default"]
+0:{"buildId":"uEEBsJt_7kd4kfGkRmSa9","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
