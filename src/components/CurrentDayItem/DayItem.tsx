@@ -2,7 +2,11 @@ import { FaRegSnowflake } from "react-icons/fa";
 
 const DayItem: React.FC = () => {
   return (
-    <div className="bg-[rgba(46,64,82,0.8)] rounded-xl py-[10px] px-[10px]">
+    <div className="
+      bg-[rgba(46,64,82,0.8)]
+      rounded-xl
+      py-[10px] px-[10px]
+     ">
       <p className="text-white text-center font-medium border-b-[3px] pb-[2px] border-b-[rgb(17,30,43)]">
         9:00 AM
       </p>
