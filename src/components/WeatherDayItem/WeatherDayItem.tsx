@@ -3,12 +3,7 @@ import { FaCloud } from "react-icons/fa";
 const WeatherDayItem: React.FC = () => {
   return (
     <div
-      className="
-        bg-[rgba(46,64,82,0.8)]
-        rounded-xl
-        p-[20px] mt-[20px]
-        grid grid-cols-[1fr_150px_3fr] gap-[10px]
-        "
+      className="bg-[rgba(46,64,82,0.8)]rounded-xlp-[20px] mt-[20px]grid grid-cols-[1fr_150px_3fr] gap-[10px]"
     >
       <h1 className="text-white text-[20px] font-medium">Today</h1>
 
