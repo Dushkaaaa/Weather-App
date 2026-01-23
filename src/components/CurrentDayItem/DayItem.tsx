@@ -1,19 +1,34 @@
-import { FaRegSnowflake } from "react-icons/fa";
+import { Hours } from "@/type/CurrentWeatherResponse";
+import Image from "next/image";
 
-const DayItem: React.FC = () => {
+type DayItemProps = {
+  hour: Hours;
+};
+
+const DayItem: React.FC<DayItemProps> = ({ hour }) => {
   return (
-    <div className="bg-[rgba(46,64,82,0.8)] rounded-xl py-[10px] px-[10px]">
+    <div className="bg-[rgba(46,64,82,0.8)] rounded-xl py-[10px] px-[10px] flex flex-col">
       <p className="text-white text-center font-medium border-b-[3px] pb-[2px] border-b-[rgb(17,30,43)]">
-        9:00 AM
+        {hour.time.split(" ")[1]}
       </p>
 
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col items-center pt-[20px]">
-          <FaRegSnowflake className="text-blue-300 text-[30px]"/>
-          <p className="text-white">Snow</p>
+      <div className="flex flex-col items-center mt-[25px]">
+        <div className="flex flex-col items-center gap-[10px]">
+          <Image
+            src={`https:${hour.condition.icon}`}
+            width={30}
+            height={30}
+            alt={hour.condition.text}
+          />
+          <p
+            title={hour.condition.text}
+            className="text-white text-center leading-[16px] line-clamp-2 overflow-hidden cursor-default"
+          >
+            {hour.condition.text}
+          </p>
         </div>
 
-        <h1 className="text-white text-[30px] pt-[20px]">-1&deg;</h1>
+        <h1 className="text-white text-[30px] pt-[20px]">{hour.temp_c}&deg;</h1>
       </div>
     </div>
   );

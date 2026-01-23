@@ -1,3 +1,13 @@
+export type Hours = {
+  time: string;
+  time_epoch: number;
+  temp_c: number;
+  condition: {
+    text: string;
+    icon: string;
+  }
+}
+
 export type WeatherResponse = {
   location: {
     name: string;
@@ -8,7 +18,7 @@ export type WeatherResponse = {
     temp_c: number;
     feelslike_c: number;
     wind_mph: number;
-    condition?: {
+    condition: {
       icon: string;
       text: string;
     }
@@ -19,6 +29,7 @@ export type WeatherResponse = {
         maxtemp_c: number;
         mintemp_c: number;
       };
+      hour: Hours[];
     }>;
   };
 };

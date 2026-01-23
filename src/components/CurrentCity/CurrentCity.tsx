@@ -1,26 +1,13 @@
 import { BsWind } from "react-icons/bs";
-import { useEffect, useState } from "react";
 import { WeatherResponse } from "@/type/CurrentWeatherResponse";
-import { getCurrentCity } from "@/utils/api";
 import Image from "next/image";
 
 type CurrentCityProps = {
-  query: string;
+  currentCity: WeatherResponse | null;
 };
 
-const CurrentCity: React.FC<CurrentCityProps> = ({ query }) => {
-  const [currentCity, setCurrentCity] = useState<WeatherResponse>();
+const CurrentCity: React.FC<CurrentCityProps> = ({ currentCity }) => {
 
-  useEffect(() => {
-    const loadCities = async () => {
-      if (query) {
-        const data = await getCurrentCity(query);
-        setCurrentCity(data);
-      }
-    };
-
-    loadCities();
-  }, [query]);
   return (
     <div className="bg-[rgba(46,64,82,0.8)] rounded-xl flex items-center justify-between p-[20px]">
       <div className="flex flex-col gap-[10px]">
@@ -46,7 +33,7 @@ const CurrentCity: React.FC<CurrentCityProps> = ({ query }) => {
 
       <div className="flex flex-col gap-[10px] items-end justify-between">
         <div className="flex flex-col items-end">
-          <h1 className="text-white text-[20px] font-medium">{query}</h1>
+          <h1 className="text-white text-[20px] font-medium">{currentCity?.location.name}</h1>
           <p className="text-white text-[12px]">
             {currentCity?.location.localtime.split(' ')[1] ?? "--"}
           </p>
