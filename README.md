@@ -3,7 +3,7 @@
 A simple and beautiful Weather App built with **Next.js 16**, **React**, and **Tailwind CSS**.  
 The app allows you to check the current weather for any city with a clean and responsive UI.
 
-🔗 Live Demo: [https://weather-hbjhutruv-yevheniis-projects-744034a3.vercel.app](https://weather-hbjhutruv-yevheniis-projects-744034a3.vercel.app)
+🔗 Live Demo: [https://weather-nj7semsos-yevheniis-projects-744034a3.vercel.app/](DEMO Link)
 
 ---
 

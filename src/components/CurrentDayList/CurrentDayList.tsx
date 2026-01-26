@@ -16,13 +16,17 @@ const DayList: React.FC<CurrentCityProps> = ({ currentCity }) => {
     return hourToShow.includes(hourNumber);
   })
   
+  if (!currentCity) {
+    return <div className="text-white text-[30px] w-full bg-[rgba(46,64,82,0.8)] rounded-xl flex justify-center items-center">Loading...</div>;
+  }
+
   return (
     <div className="grid grid-cols-8 gap-[10px]">
-      {filteredHours.map(hour => (
+      {filteredHours.map((hour) => (
         <DayItem key={hour.time_epoch} hour={hour} />
       ))}
     </div>
-  )
+  );
 }
 
 export default DayList;
